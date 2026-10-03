@@ -2,487 +2,948 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Aireen & Matej | May 20, 2027</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aireen & Matej | Our Wedding</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
+
 :root{
- --black:#080706;
- --dark:#120d0d;
- --red:#791923;
- --red2:#a52d38;
- --gold:#d5b46a;
- --cream:#f7efe2;
- --muted:#b8aa99;
+--black:#070606;
+--black2:#100b0c;
+--wine:#64141d;
+--wine2:#8f202d;
+--gold:#d7b56b;
+--gold2:#f0d99a;
+--cream:#f8f0e5;
+--muted:#b9aaa0;
 }
 
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
+}
 
 body{
- margin:0;
- background:var(--black);
- color:var(--cream);
- font-family:Montserrat,sans-serif;
- font-weight:300;
+background:var(--black);
+color:var(--cream);
+font-family:'Montserrat',sans-serif;
+font-weight:300;
+overflow-x:hidden;
 }
+
+/* ---------- FIRELIGHT ---------- */
 
 body:before{
- content:"";
- position:fixed;
- inset:0;
- pointer-events:none;
- opacity:.15;
- background-image:
- radial-gradient(circle,var(--gold) 1px,transparent 1.5px);
- background-size:120px 150px;
- animation:stars 20s linear infinite;
- z-index:10;
+content:"";
+position:fixed;
+inset:0;
+pointer-events:none;
+z-index:50;
+background:
+radial-gradient(circle at 50% 40%,rgba(130,20,30,.12),transparent 35%),
+radial-gradient(circle at 20% 80%,rgba(100,30,20,.08),transparent 30%);
 }
 
-@keyframes stars{
- to{background-position:120px 150px}
-}
+/* ---------- NAV ---------- */
 
 nav{
- position:absolute;
- top:0;
- left:0;
- right:0;
- z-index:5;
- display:flex;
- justify-content:space-between;
- align-items:center;
- padding:28px 7%;
+position:fixed;
+top:0;
+left:0;
+right:0;
+z-index:40;
+padding:24px 7%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:linear-gradient(
+to bottom,
+rgba(0,0,0,.75),
+transparent
+);
 }
 
 .logo{
- color:var(--gold);
- font-family:"Cormorant Garamond";
- font-size:27px;
- letter-spacing:4px;
- text-decoration:none;
+font-family:'Great Vibes';
+font-size:30px;
+color:var(--gold);
+text-decoration:none;
 }
 
-nav a{
- color:var(--cream);
- text-decoration:none;
- font-size:10px;
- letter-spacing:3px;
- text-transform:uppercase;
- margin-left:28px;
+nav a:not(.logo){
+font-size:9px;
+letter-spacing:3px;
+text-transform:uppercase;
+color:var(--cream);
+text-decoration:none;
+margin-left:28px;
+opacity:.8;
 }
+
+/* ---------- HERO ---------- */
 
 .hero{
- min-height:100vh;
- display:flex;
- align-items:center;
- justify-content:center;
- text-align:center;
- position:relative;
- overflow:hidden;
- background:
- radial-gradient(circle at 50% 43%,rgba(121,25,35,.45),transparent 27%),
- radial-gradient(ellipse at 50% 100%,#321216,transparent 55%),
- linear-gradient(145deg,#030303,#15100e,#060505);
+height:100vh;
+min-height:720px;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+overflow:hidden;
+
+background:
+radial-gradient(
+circle at 50% 48%,
+rgba(113,20,30,.5),
+transparent 28%
+),
+linear-gradient(
+180deg,
+#030303 0%,
+#0d0808 55%,
+#170b0e 100%
+);
 }
+
+/* forest silhouettes */
 
 .hero:after{
- content:"";
- position:absolute;
- inset:auto -20% -35%;
- height:65%;
- background:
- radial-gradient(ellipse at 20% 100%,rgba(20,53,31,.9),transparent 45%),
- radial-gradient(ellipse at 80% 100%,rgba(13,40,23,.9),transparent 45%);
- filter:blur(8px);
+content:"";
+position:absolute;
+left:-10%;
+right:-10%;
+bottom:-10%;
+height:42%;
+
+background:
+linear-gradient(
+135deg,
+transparent 20%,
+rgba(5,20,12,.95) 21%,
+rgba(5,20,12,.95) 26%,
+transparent 27%
+),
+linear-gradient(
+45deg,
+transparent 30%,
+rgba(4,17,10,.95) 31%,
+rgba(4,17,10,.95) 37%,
+transparent 38%
+);
+
+filter:blur(2px);
+opacity:.9;
 }
 
+/* ---------- FIREFLIES ---------- */
+
+.firefly{
+position:absolute;
+width:4px;
+height:4px;
+background:var(--gold2);
+border-radius:50%;
+box-shadow:
+0 0 8px var(--gold),
+0 0 16px var(--gold);
+animation:float 5s infinite ease-in-out;
+opacity:.7;
+}
+
+.f1{left:12%;top:32%;animation-delay:0s}
+.f2{left:25%;top:62%;animation-delay:1s}
+.f3{left:74%;top:30%;animation-delay:2s}
+.f4{left:84%;top:55%;animation-delay:3s}
+.f5{left:63%;top:68%;animation-delay:1.5s}
+.f6{left:37%;top:27%;animation-delay:2.5s}
+.f7{left:90%;top:38%;animation-delay:4s}
+.f8{left:17%;top:48%;animation-delay:3.5s}
+
+@keyframes float{
+
+0%,100%{
+transform:translateY(0) scale(1);
+opacity:.3;
+}
+
+50%{
+transform:translateY(-25px) scale(1.8);
+opacity:1;
+}
+
+}
+
+/* ---------- HERO CONTENT ---------- */
+
 .hero-content{
- position:relative;
- z-index:2;
- padding:80px 20px;
+position:relative;
+z-index:5;
+padding:40px 20px;
 }
 
 .eyebrow{
- color:var(--gold);
- font-size:10px;
- letter-spacing:4px;
- text-transform:uppercase;
+font-size:9px;
+letter-spacing:5px;
+text-transform:uppercase;
+color:var(--gold);
 }
 
-h1{
- font-family:"Cormorant Garamond";
- font-weight:400;
- font-size:clamp(65px,12vw,145px);
- line-height:.8;
- margin:25px 0 0;
+.hero h1{
+font-family:'Cormorant Garamond';
+font-weight:300;
+font-size:clamp(70px,14vw,150px);
+line-height:.75;
+margin:35px 0 25px;
+letter-spacing:-3px;
 }
 
-h1 span{
- font-family:"Great Vibes";
- color:var(--gold);
- font-size:.55em;
+.hero h1 span{
+font-family:'Great Vibes';
+font-size:.55em;
+color:var(--gold);
+padding:0 10px;
 }
 
 .script{
- font-family:"Great Vibes";
- color:var(--red2);
- font-size:43px;
- margin:30px 0 12px;
+font-family:'Great Vibes';
+font-size:48px;
+color:var(--wine2);
+margin-bottom:25px;
 }
 
-.intro{
- color:var(--muted);
- font-size:12px;
- letter-spacing:1px;
+.subtitle{
+font-size:11px;
+letter-spacing:1px;
+color:var(--muted);
 }
 
-.gold-btn{
- display:inline-block;
- margin-top:30px;
- padding:15px 28px;
- border:1px solid var(--gold);
- color:var(--cream);
- text-decoration:none;
- font-size:10px;
- letter-spacing:3px;
- text-transform:uppercase;
- transition:.3s;
+.gold-button{
+display:inline-block;
+margin-top:38px;
+padding:17px 35px;
+border:1px solid var(--gold);
+color:var(--cream);
+text-decoration:none;
+font-size:9px;
+letter-spacing:3px;
+text-transform:uppercase;
+transition:.4s;
 }
 
-.gold-btn:hover{
- background:var(--gold);
- color:#080706;
+.gold-button:hover{
+background:var(--gold);
+color:#080606;
 }
+
+/* ---------- SECTION ---------- */
 
 section{
- padding:100px 8%;
- text-align:center;
+padding:110px 8%;
+text-align:center;
+position:relative;
 }
 
-.countdown{
- background:#0d0b0a;
- border-top:1px solid #3a2c20;
- border-bottom:1px solid #3a2c20;
-}
-
-.timer{
- display:flex;
- justify-content:center;
- gap:7vw;
- margin-top:35px;
-}
-
-.timer strong{
- display:block;
- font-family:"Cormorant Garamond";
- font-size:50px;
- font-weight:400;
-}
-
-.timer small{
- color:var(--gold);
- font-size:8px;
- letter-spacing:2px;
-}
-
-.story{
- background:
- radial-gradient(circle at 50% 50%,rgba(121,25,35,.14),transparent 45%);
+.section-label{
+font-size:9px;
+letter-spacing:5px;
+text-transform:uppercase;
+color:var(--gold);
 }
 
 h2{
- font-family:"Cormorant Garamond";
- font-size:clamp(42px,6vw,68px);
- font-weight:400;
- margin:15px 0 25px;
+font-family:'Cormorant Garamond';
+font-weight:300;
+font-size:clamp(45px,7vw,75px);
+margin:18px 0 30px;
 }
 
-.text{
- max-width:650px;
- margin:auto;
- color:var(--muted);
- font-size:14px;
- line-height:2;
+.description{
+max-width:680px;
+margin:auto;
+color:var(--muted);
+font-size:13px;
+line-height:2.1;
+}
+
+/* ---------- COUNTDOWN ---------- */
+
+.countdown{
+background:
+linear-gradient(
+135deg,
+#0b0808,
+#1a0b0e,
+#090707
+);
+
+border-top:1px solid rgba(215,181,107,.2);
+border-bottom:1px solid rgba(215,181,107,.2);
+}
+
+.timer{
+display:flex;
+justify-content:center;
+gap:7vw;
+margin-top:45px;
+}
+
+.timer-item strong{
+display:block;
+font-family:'Cormorant Garamond';
+font-size:55px;
+font-weight:300;
+color:var(--cream);
+}
+
+.timer-item span{
+font-size:8px;
+letter-spacing:3px;
+color:var(--gold);
+}
+
+/* ---------- STORY ---------- */
+
+.story{
+background:
+radial-gradient(
+circle at center,
+rgba(100,20,29,.18),
+transparent 50%
+);
 }
 
 .signature{
- font-family:"Great Vibes";
- color:var(--gold);
- font-size:45px;
- margin-top:35px;
+font-family:'Great Vibes';
+font-size:48px;
+color:var(--gold);
+margin-top:35px;
 }
 
+/* ---------- DETAILS ---------- */
+
 .details{
- background:linear-gradient(#0b0908,#180f10);
+background:
+linear-gradient(
+180deg,
+#090707,
+#14090b
+);
 }
 
 .cards{
- max-width:950px;
- margin:45px auto 0;
- display:grid;
- grid-template-columns:repeat(3,1fr);
- gap:20px;
+max-width:1000px;
+margin:50px auto 0;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
 }
 
 .card{
- border:1px solid rgba(213,180,106,.25);
- padding:45px 20px;
- background:rgba(0,0,0,.2);
+padding:50px 25px;
+border:1px solid rgba(215,181,107,.25);
+background:rgba(0,0,0,.2);
+transition:.4s;
 }
 
-.card .symbol{
- color:var(--gold);
- font-size:28px;
+.card:hover{
+transform:translateY(-8px);
+border-color:var(--gold);
+}
+
+.icon{
+font-size:28px;
+color:var(--gold);
+margin-bottom:15px;
 }
 
 .card h3{
- font-family:"Cormorant Garamond";
- font-size:30px;
- font-weight:400;
+font-family:'Cormorant Garamond';
+font-size:32px;
+font-weight:400;
+margin-bottom:15px;
 }
 
 .card p{
- color:var(--muted);
- font-size:12px;
- line-height:2;
+font-size:11px;
+line-height:2;
+color:var(--muted);
 }
 
 .card b{
- color:var(--cream);
- font-weight:400;
+color:var(--cream);
+font-weight:400;
 }
+
+/* ---------- QUOTE ---------- */
 
 .quote{
- background:linear-gradient(135deg,#2a0d12,#080707);
+background:
+linear-gradient(
+135deg,
+#260b10,
+#080606
+);
 }
 
-.quote p{
- max-width:800px;
- margin:auto;
- font-family:"Cormorant Garamond";
- font-size:clamp(30px,5vw,55px);
+.quote-text{
+font-family:'Cormorant Garamond';
+font-size:clamp(30px,5vw,58px);
+max-width:850px;
+margin:auto;
+line-height:1.2;
 }
 
-.quote small{
- display:block;
- color:var(--gold);
- margin-top:20px;
+.quote-author{
+display:block;
+margin-top:25px;
+font-size:9px;
+letter-spacing:3px;
+color:var(--gold);
 }
+
+/* ---------- DRESS CODE ---------- */
+
+.dress{
+background:#090707;
+}
+
+.dress-box{
+max-width:700px;
+margin:45px auto 0;
+padding:55px 25px;
+border:1px solid rgba(215,181,107,.25);
+}
+
+.colors{
+display:flex;
+justify-content:center;
+gap:18px;
+margin-top:30px;
+}
+
+.color{
+width:45px;
+height:45px;
+border-radius:50%;
+border:1px solid rgba(255,255,255,.15);
+}
+
+.red{background:#701722}
+.black{background:#080808}
+.gold{background:#d1ad60}
+
+/* ---------- VENUE ---------- */
+
+.venue{
+background:
+linear-gradient(
+rgba(30,8,11,.8),
+rgba(5,5,5,.95)
+);
+}
+
+.venue-name{
+font-family:'Cormorant Garamond';
+font-size:38px;
+margin-top:20px;
+}
+
+.venue-note{
+margin-top:12px;
+color:var(--muted);
+font-size:12px;
+}
+
+/* ---------- RSVP ---------- */
 
 .rsvp{
- min-height:500px;
+min-height:550px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+background:
+radial-gradient(
+circle at center,
+rgba(120,20,30,.3),
+transparent 55%
+);
+}
+
+.rsvp-heart{
+font-size:30px;
+color:var(--gold);
+margin-bottom:15px;
 }
 
 footer{
- padding:60px 20px;
- text-align:center;
- border-top:1px solid #30251c;
- color:var(--muted);
- font-size:11px;
+padding:65px 20px;
+text-align:center;
+border-top:1px solid rgba(215,181,107,.2);
+background:#050505;
 }
 
 footer .logo{
- display:block;
- margin-bottom:15px;
+display:block;
+margin-bottom:15px;
 }
 
-@media(max-width:650px){
- nav a{display:none}
- .cards{grid-template-columns:1fr}
- .timer{gap:15px}
- .timer strong{font-size:36px}
- section{padding:80px 25px}
- h1{font-size:68px}
+footer p{
+font-size:10px;
+color:var(--muted);
+letter-spacing:1px;
 }
+
+/* ---------- MOBILE ---------- */
+
+@media(max-width:700px){
+
+nav{
+padding:20px;
+}
+
+nav a:not(.logo){
+display:none;
+}
+
+.hero{
+min-height:700px;
+}
+
+.hero h1{
+font-size:70px;
+}
+
+.script{
+font-size:42px;
+}
+
+.timer{
+gap:18px;
+}
+
+.timer-item strong{
+font-size:38px;
+}
+
+.cards{
+grid-template-columns:1fr;
+max-width:400px;
+}
+
+section{
+padding:85px 25px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
+
 <nav>
-<a class="logo" href="#">A & M</a>
+
+<a href="#" class="logo">A & M</a>
+
 <div>
 <a href="#story">Our Story</a>
 <a href="#details">Details</a>
 <a href="#rsvp">RSVP</a>
 </div>
+
 </nav>
 
+
+<!-- FIREFLIES -->
+
+<div class="firefly f1"></div>
+<div class="firefly f2"></div>
+<div class="firefly f3"></div>
+<div class="firefly f4"></div>
+<div class="firefly f5"></div>
+<div class="firefly f6"></div>
+<div class="firefly f7"></div>
+<div class="firefly f8"></div>
+
+
+<!-- HERO -->
+
 <header class="hero">
+
 <div class="hero-content">
-<div class="eyebrow">A FOREST DREAM • MAY 20, 2027</div>
 
-<h1>Aireen <span>&</span> Matej</h1>
+<div class="eyebrow">
+A FOREST DREAM • MAY 20, 2027
+</div>
 
-<div class="script">are getting married</div>
+<h1>
+Aireen
+<span>&</span>
+Matej
+</h1>
 
-<p class="intro">
-Two hearts, two worlds, one beautiful forever.
+<div class="script">
+are getting married
+</div>
+
+<p class="subtitle">
+Two hearts. Two worlds. One beautiful forever.
 </p>
 
-<a class="gold-btn" href="#details">Discover Our Day</a>
+<a href="#story" class="gold-button">
+Enter Our Story
+</a>
+
 </div>
+
 </header>
 
+
+<!-- COUNTDOWN -->
+
 <section class="countdown">
-<div class="eyebrow">COUNTING DOWN TO FOREVER</div>
+
+<div class="section-label">
+COUNTING DOWN TO FOREVER
+</div>
+
+<h2>Until We Say “I Do”</h2>
 
 <div class="timer">
-<div>
+
+<div class="timer-item">
 <strong id="days">0</strong>
-<small>DAYS</small>
+<span>DAYS</span>
 </div>
 
-<div>
+<div class="timer-item">
 <strong id="hours">0</strong>
-<small>HOURS</small>
+<span>HOURS</span>
 </div>
 
-<div>
+<div class="timer-item">
 <strong id="minutes">0</strong>
-<small>MINUTES</small>
+<span>MINUTES</span>
 </div>
 
-<div>
+<div class="timer-item">
 <strong id="seconds">0</strong>
-<small>SECONDS</small>
+<span>SECONDS</span>
 </div>
+
 </div>
+
 </section>
+
+
+<!-- OUR STORY -->
 
 <section class="story" id="story">
 
-<div class="eyebrow">OUR STORY</div>
+<div class="section-label">
+OUR STORY
+</div>
 
-<h2>And so, the adventure continues…</h2>
+<h2>
+Two worlds. One love.
+</h2>
 
-<p class="text">
-From two different places in the world to one shared home
-and one shared future, our story has always been about
-choosing each other.
+<p class="description">
 
-Now, surrounded by the people we love,
-we begin our next beautiful chapter.
+Somewhere between two countries, countless conversations,
+beautiful memories and the little moments that became
+our favorite memories, we found something worth choosing
+every single day.
+
+<br><br>
+
+Now, we are beginning a new chapter —
+one filled with love, laughter, adventure and forever.
+
 </p>
 
-<div class="signature">Aireen & Matej</div>
+<div class="signature">
+Aireen & Matej
+</div>
 
 </section>
 
+
+<!-- DETAILS -->
+
 <section class="details" id="details">
 
-<div class="eyebrow">THE WEDDING DAY</div>
+<div class="section-label">
+THE WEDDING DAY
+</div>
 
-<h2>Save the Date</h2>
+<h2>
+Our Beginning
+</h2>
 
 <div class="cards">
 
 <div class="card">
-<div class="symbol">✦</div>
+
+<div class="icon">✦</div>
+
 <h3>When</h3>
+
 <p>
-Thursday<br>
+Thursday<br><br>
 <b>May 20, 2027</b>
 </p>
+
 </div>
 
+
 <div class="card">
-<div class="symbol">❧</div>
+
+<div class="icon">❧</div>
+
 <h3>Where</h3>
+
 <p>
-Philippines<br>
-<b>Details to follow</b>
+Philippines<br><br>
+<b>Venue details coming soon</b>
 </p>
+
 </div>
+
 
 <div class="card">
-<div class="symbol">♡</div>
-<h3>Theme</h3>
+
+<div class="icon">♡</div>
+
+<h3>Celebration</h3>
+
 <p>
-Elegant & Romantic<br>
-<b>Red • Black • Gold</b>
+A day filled with<br>
+love, laughter & memories<br><br>
+<b>50 special guests</b>
 </p>
+
 </div>
 
 </div>
+
 </section>
+
+
+<!-- QUOTE -->
 
 <section class="quote">
 
-<div class="eyebrow">FOREVER & ALWAYS</div>
+<div class="section-label">
+FOREVER
+</div>
 
-<p>
+<p class="quote-text">
+
 “Whatever our souls are made of,
 his and mine are the same.”
+
 </p>
 
-<small>— Emily Brontë</small>
+<span class="quote-author">
+— EMILY BRONTË
+</span>
 
 </section>
 
-<section class="rsvp" id="rsvp">
 
-<div class="eyebrow">KINDLY RESPOND</div>
+<!-- DRESS CODE -->
 
-<h2>Will you celebrate with us?</h2>
+<section class="dress">
 
-<p class="text">
-We would be delighted to have you with us as we say
-“I do.”
+<div class="section-label">
+DRESS CODE
+</div>
 
-Formal invitation and RSVP details will be shared soon.
+<h2>
+Elegant & Romantic
+</h2>
+
+<p class="description">
+
+Our celebration will embrace an elegant,
+romantic atmosphere inspired by the forest at night.
+
+<br><br>
+
+Think timeless, sophisticated and magical.
+
 </p>
 
-<a class="gold-btn" href="mailto:YOUR-EMAIL@example.com">
-RSVP ♡
+<div class="dress-box">
+
+<div class="section-label">
+OUR COLORS
+</div>
+
+<div class="colors">
+
+<div class="color red"></div>
+<div class="color black"></div>
+<div class="color gold"></div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- VENUE -->
+
+<section class="venue">
+
+<div class="section-label">
+OUR WEDDING VENUE
+</div>
+
+<h2>
+Where Our Forever Begins
+</h2>
+
+<div class="venue-name">
+Venue To Be Announced
+</div>
+
+<p class="venue-note">
+
+Full venue details, directions and accommodation
+information will be shared with our formal invitation.
+
+</p>
+
+</section>
+
+
+<!-- RSVP -->
+
+<section class="rsvp" id="rsvp">
+
+<div class="rsvp-heart">
+♡
+</div>
+
+<div class="section-label">
+KINDLY RESPOND
+</div>
+
+<h2>
+Will you celebrate with us?
+</h2>
+
+<p class="description">
+
+Your presence would mean the world to us.
+
+<br><br>
+
+Formal invitation and RSVP details
+will be shared soon.
+
+</p>
+
+<a
+href="mailto:YOUR-EMAIL@example.com"
+class="gold-button"
+>
+RSVP WITH LOVE
 </a>
 
 </section>
 
+
+<!-- FOOTER -->
+
 <footer>
 
-<div class="logo">A & M</div>
+<div class="logo">
+Aireen & Matej
+</div>
 
-<p>With love, Aireen & Matej</p>
+<p>
+With love, always.
+</p>
 
-<p>© 2027 • Our forever begins here.</p>
+<br>
+
+<p>
+© 2027 • Our forever begins here.
+</p>
 
 </footer>
 
+
 <script>
+
+/* COUNTDOWN */
 
 const weddingDate =
 new Date("2027-05-20T15:00:00+02:00").getTime();
 
-function countdown(){
+function updateCountdown(){
 
-const now = new Date().getTime();
-const distance = weddingDate - now;
+const now =
+new Date().getTime();
 
-if(distance <= 0) return;
+const distance =
+weddingDate - now;
 
-document.getElementById("days").textContent =
-Math.floor(distance/(1000*60*60*24));
+if(distance <= 0){
+return;
+}
 
-document.getElementById("hours").textContent =
-Math.floor(distance/(1000*60*60))%24;
+document.getElementById("days").innerText =
+Math.floor(
+distance /
+(1000 * 60 * 60 * 24)
+);
 
-document.getElementById("minutes").textContent =
-Math.floor(distance/(1000*60))%60;
+document.getElementById("hours").innerText =
+Math.floor(
+distance /
+(1000 * 60 * 60)
+) % 24;
 
-document.getElementById("seconds").textContent =
-Math.floor(distance/1000)%60;
+document.getElementById("minutes").innerText =
+Math.floor(
+distance /
+(1000 * 60)
+) % 60;
+
+document.getElementById("seconds").innerText =
+Math.floor(
+distance / 1000
+) % 60;
 
 }
 
-countdown();
-setInterval(countdown,1000);
+updateCountdown();
+
+setInterval(
+updateCountdown,
+1000
+);
 
 </script>
 
