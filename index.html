@@ -4,948 +4,913 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Aireen & Matej | Our Wedding</title>
+<title>Aireen & Matej | A Journey to Forever</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
-:root{
---black:#070606;
---black2:#100b0c;
---wine:#64141d;
---wine2:#8f202d;
---gold:#d7b56b;
---gold2:#f0d99a;
---cream:#f8f0e5;
---muted:#b9aaa0;
-}
-
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-background:var(--black);
-color:var(--cream);
-font-family:'Montserrat',sans-serif;
-font-weight:300;
-overflow-x:hidden;
-}
-
-/* ---------- FIRELIGHT ---------- */
-
-body:before{
-content:"";
-position:fixed;
-inset:0;
-pointer-events:none;
-z-index:50;
-background:
-radial-gradient(circle at 50% 40%,rgba(130,20,30,.12),transparent 35%),
-radial-gradient(circle at 20% 80%,rgba(100,30,20,.08),transparent 30%);
-}
-
-/* ---------- NAV ---------- */
-
-nav{
-position:fixed;
-top:0;
-left:0;
-right:0;
-z-index:40;
-padding:24px 7%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:linear-gradient(
-to bottom,
-rgba(0,0,0,.75),
-transparent
-);
-}
-
-.logo{
-font-family:'Great Vibes';
-font-size:30px;
-color:var(--gold);
-text-decoration:none;
-}
-
-nav a:not(.logo){
-font-size:9px;
-letter-spacing:3px;
-text-transform:uppercase;
-color:var(--cream);
-text-decoration:none;
-margin-left:28px;
-opacity:.8;
-}
-
-/* ---------- HERO ---------- */
-
-.hero{
-height:100vh;
-min-height:720px;
-position:relative;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-overflow:hidden;
-
-background:
-radial-gradient(
-circle at 50% 48%,
-rgba(113,20,30,.5),
-transparent 28%
-),
-linear-gradient(
-180deg,
-#030303 0%,
-#0d0808 55%,
-#170b0e 100%
-);
+:root {
+  --black:#090706;
+  --dark:#160c0a;
+  --wine:#64131b;
+  --red:#8e2430;
+  --gold:#c69a4b;
+  --gold-light:#e5c77f;
+  --cream:#f8f0df;
+  --paper:#f5e6c8;
+  --brown:#3b2119;
+}
+
+* {
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html {
+  scroll-behavior:smooth;
+}
+
+body {
+  background:var(--black);
+  color:var(--cream);
+  font-family:'Montserrat',sans-serif;
+  font-weight:300;
+  overflow-x:hidden;
+}
+
+body:before {
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:100;
+  opacity:.12;
+  background-image:
+    radial-gradient(#fff .5px,transparent .6px);
+  background-size:5px 5px;
+}
+
+/* NAVIGATION */
+
+nav {
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:90;
+  padding:20px 6%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:linear-gradient(
+    rgba(5,4,3,.9),
+    transparent
+  );
+}
+
+.logo {
+  font-family:'Great Vibes';
+  font-size:30px;
+  color:var(--gold-light);
+  text-decoration:none;
+}
+
+.links {
+  display:flex;
+  gap:25px;
+}
+
+.links a {
+  color:var(--cream);
+  text-decoration:none;
+  font-size:9px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.menu {
+  display:none;
+  color:var(--gold-light);
+  font-size:24px;
+}
+
+/* HERO */
+
+.hero {
+  min-height:100vh;
+  display:grid;
+  place-items:center;
+  position:relative;
+  overflow:hidden;
+
+  background:
+    radial-gradient(
+      circle at 65% 25%,
+      rgba(128,35,42,.35),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 45% 60%,
+      rgba(160,30,45,.18),
+      transparent 35%
+    ),
+    linear-gradient(
+      120deg,
+      #080605,
+      #25110e,
+      #080605
+    );
 }
+
+.hero:before {
+  content:"";
+  position:absolute;
+  inset:0;
+  opacity:.25;
 
-/* forest silhouettes */
+  background:
+    repeating-linear-gradient(
+      100deg,
+      transparent 0 80px,
+      rgba(220,180,100,.12) 81px 82px
+    );
+}
+
+.hero-inner {
+  position:relative;
+  z-index:5;
+  width:min(1180px,92%);
+  padding:110px 0 60px;
+}
+
+.travel-line {
+  display:flex;
+  align-items:center;
+  gap:15px;
+
+  color:var(--gold-light);
+  font-size:9px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+}
+
+.travel-line:before,
+.travel-line:after {
+  content:"";
+  height:1px;
+  background:rgba(198,154,75,.5);
+  flex:1;
+}
+
+.hero-grid {
+  display:grid;
+  grid-template-columns:290px 1fr 330px;
+  gap:35px;
+  align-items:center;
+  margin-top:30px;
+}
+
+/* PASSPORT */
+
+.passport {
+  height:430px;
+  padding:28px 22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #4b1e1c,
+      #170b0a
+    );
+
+  border:1px solid rgba(229,199,127,.5);
+  border-radius:8px;
+
+  transform:rotate(-7deg);
+
+  box-shadow:
+    0 30px 60px rgba(0,0,0,.7),
+    inset 0 0 35px rgba(0,0,0,.5);
+
+  position:relative;
+  overflow:hidden;
+}
+
+.passport:before {
+  content:"";
+  position:absolute;
+  inset:12px;
+  border:1px solid rgba(229,199,127,.35);
+  border-radius:4px;
+}
 
-.hero:after{
-content:"";
-position:absolute;
-left:-10%;
-right:-10%;
-bottom:-10%;
-height:42%;
+.passport .world {
+  font-size:65px;
+  color:rgba(229,199,127,.5);
+  margin-top:20px;
+}
+
+.passport h3 {
+  font-family:'Cormorant Garamond';
+  font-size:34px;
+  letter-spacing:4px;
+  color:#ead19b;
+  margin-top:15px;
+}
+
+.small {
+  font-size:8px;
+  letter-spacing:3px;
+  color:#d6b86f;
+}
 
-background:
-linear-gradient(
-135deg,
-transparent 20%,
-rgba(5,20,12,.95) 21%,
-rgba(5,20,12,.95) 26%,
-transparent 27%
-),
-linear-gradient(
-45deg,
-transparent 30%,
-rgba(4,17,10,.95) 31%,
-rgba(4,17,10,.95) 37%,
-transparent 38%
-);
+.passport .script {
+  font-family:'Great Vibes';
+  font-size:37px;
+  color:#eed49c;
+  margin-top:75px;
+}
+
+.passport .number {
+  position:absolute;
+  bottom:25px;
+  left:25px;
 
-filter:blur(2px);
-opacity:.9;
+  font:11px monospace;
+  letter-spacing:4px;
+
+  color:#d2b875;
 }
 
-/* ---------- FIREFLIES ---------- */
+/* CENTER */
+
+.hero-center {
+  text-align:center;
+}
 
-.firefly{
-position:absolute;
-width:4px;
-height:4px;
-background:var(--gold2);
-border-radius:50%;
-box-shadow:
-0 0 8px var(--gold),
-0 0 16px var(--gold);
-animation:float 5s infinite ease-in-out;
-opacity:.7;
+.kicker {
+  font-size:9px;
+  letter-spacing:6px;
+  color:var(--gold-light);
+  text-transform:uppercase;
 }
 
-.f1{left:12%;top:32%;animation-delay:0s}
-.f2{left:25%;top:62%;animation-delay:1s}
-.f3{left:74%;top:30%;animation-delay:2s}
-.f4{left:84%;top:55%;animation-delay:3s}
-.f5{left:63%;top:68%;animation-delay:1.5s}
-.f6{left:37%;top:27%;animation-delay:2.5s}
-.f7{left:90%;top:38%;animation-delay:4s}
-.f8{left:17%;top:48%;animation-delay:3.5s}
+.hero h1 {
+  font-family:'Cormorant Garamond';
+  font-weight:400;
 
-@keyframes float{
+  font-size:clamp(65px,9vw,120px);
 
-0%,100%{
-transform:translateY(0) scale(1);
-opacity:.3;
+  line-height:.8;
+  letter-spacing:2px;
+
+  margin:35px 0 20px;
+}
+
+.hero h1 span {
+  font-family:'Great Vibes';
+  font-size:.55em;
+  color:var(--gold-light);
 }
 
-50%{
-transform:translateY(-25px) scale(1.8);
-opacity:1;
+.hero-script {
+  font-family:'Great Vibes';
+  font-size:45px;
+  color:#b73743;
+  margin:25px 0;
 }
 
+.hero-tag {
+  font-size:10px;
+  letter-spacing:2px;
+  color:#d6c6aa;
 }
+
+.flight-path {
+  margin:30px auto;
+
+  display:flex;
+  align-items:center;
+  gap:10px;
 
-/* ---------- HERO CONTENT ---------- */
+  max-width:330px;
 
-.hero-content{
-position:relative;
-z-index:5;
-padding:40px 20px;
+  color:var(--gold-light);
 }
 
-.eyebrow{
-font-size:9px;
-letter-spacing:5px;
-text-transform:uppercase;
-color:var(--gold);
+.flight-path:before,
+.flight-path:after {
+  content:"";
+  flex:1;
+  border-top:1px dashed rgba(198,154,75,.6);
 }
+
+.gold-button {
+  display:inline-block;
+
+  margin-top:25px;
+
+  padding:16px 34px;
+
+  border:1px solid var(--gold);
+
+  background:rgba(30,15,10,.7);
+
+  color:var(--cream);
 
-.hero h1{
-font-family:'Cormorant Garamond';
-font-weight:300;
-font-size:clamp(70px,14vw,150px);
-line-height:.75;
-margin:35px 0 25px;
-letter-spacing:-3px;
+  text-decoration:none;
+
+  font-size:9px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+
+  transition:.3s;
 }
 
-.hero h1 span{
-font-family:'Great Vibes';
-font-size:.55em;
-color:var(--gold);
-padding:0 10px;
+.gold-button:hover {
+  background:var(--gold);
+  color:#160c08;
 }
+
+/* BOARDING PASS */
+
+.boarding {
+  min-height:350px;
+
+  background:var(--paper);
+  color:#24150f;
 
-.script{
-font-family:'Great Vibes';
-font-size:48px;
-color:var(--wine2);
-margin-bottom:25px;
+  padding:25px 22px;
+
+  position:relative;
+
+  transform:rotate(5deg);
+
+  box-shadow:0 30px 55px rgba(0,0,0,.7);
+
+  border-left:12px solid #72202a;
 }
+
+.boarding:after {
+  content:"";
 
-.subtitle{
-font-size:11px;
-letter-spacing:1px;
-color:var(--muted);
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:-7px;
+
+  border-left:2px dashed #ead9b5;
 }
+
+.vip {
+  position:absolute;
+  right:18px;
+  top:18px;
 
-.gold-button{
-display:inline-block;
-margin-top:38px;
-padding:17px 35px;
-border:1px solid var(--gold);
-color:var(--cream);
-text-decoration:none;
-font-size:9px;
-letter-spacing:3px;
-text-transform:uppercase;
-transition:.4s;
+  border:1px solid #8d6a3a;
+
+  padding:6px 9px;
+
+  font-size:8px;
+  letter-spacing:2px;
 }
 
-.gold-button:hover{
-background:var(--gold);
-color:#080606;
+.boarding h3 {
+  font-family:'Cormorant Garamond';
+  font-size:30px;
+  letter-spacing:3px;
+  margin:8px 0 18px;
 }
+
+.pass-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
 
-/* ---------- SECTION ---------- */
+  border-top:1px solid rgba(141,106,58,.4);
 
-section{
-padding:110px 8%;
-text-align:center;
-position:relative;
+  padding-top:15px;
 }
 
-.section-label{
-font-size:9px;
-letter-spacing:5px;
-text-transform:uppercase;
-color:var(--gold);
+.pass-grid label {
+  display:block;
+
+  font-size:7px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+
+  color:#765a3b;
 }
 
-h2{
-font-family:'Cormorant Garamond';
-font-weight:300;
-font-size:clamp(45px,7vw,75px);
-margin:18px 0 30px;
+.pass-grid b {
+  display:block;
+
+  font-family:'Cormorant Garamond';
+  font-size:21px;
+
+  margin-top:4px;
 }
+
+.barcode {
+  height:52px;
+  margin-top:20px;
 
-.description{
-max-width:680px;
-margin:auto;
-color:var(--muted);
-font-size:13px;
-line-height:2.1;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      #221710 0 2px,
+      transparent 2px 5px,
+      #221710 5px 6px,
+      transparent 6px 9px
+    );
+
+  opacity:.75;
 }
+
+.stamp {
+  display:inline-block;
+
+  margin-top:15px;
+
+  padding:7px 10px;
+
+  border:2px solid #8c3c3d;
 
-/* ---------- COUNTDOWN ---------- */
+  color:#8c3c3d;
 
-.countdown{
-background:
-linear-gradient(
-135deg,
-#0b0808,
-#1a0b0e,
-#090707
-);
+  font-size:8px;
+  letter-spacing:2px;
 
-border-top:1px solid rgba(215,181,107,.2);
-border-bottom:1px solid rgba(215,181,107,.2);
+  transform:rotate(-5deg);
 }
 
-.timer{
-display:flex;
-justify-content:center;
-gap:7vw;
-margin-top:45px;
+/* SECTIONS */
+
+.section {
+  padding:105px 6%;
+  position:relative;
+}
+
+.dark {
+  background:
+    linear-gradient(
+      180deg,
+      #090706,
+      #180a09
+    );
 }
 
-.timer-item strong{
-display:block;
-font-family:'Cormorant Garamond';
-font-size:55px;
-font-weight:300;
-color:var(--cream);
+.paper {
+  background:var(--paper);
+  color:#271711;
 }
 
-.timer-item span{
-font-size:8px;
-letter-spacing:3px;
-color:var(--gold);
+.section-head {
+  text-align:center;
+  margin-bottom:50px;
 }
 
-/* ---------- STORY ---------- */
+.section-kicker {
+  font-size:9px;
+  letter-spacing:5px;
+  text-transform:uppercase;
+
+  color:var(--gold);
+}
 
-.story{
-background:
-radial-gradient(
-circle at center,
-rgba(100,20,29,.18),
-transparent 50%
-);
+.paper .section-kicker {
+  color:#85402d;
 }
 
-.signature{
-font-family:'Great Vibes';
-font-size:48px;
-color:var(--gold);
-margin-top:35px;
+h2 {
+  font-family:'Cormorant Garamond';
+  font-weight:400;
+
+  font-size:clamp(45px,6vw,72px);
+
+  margin:16px 0;
 }
 
-/* ---------- DETAILS ---------- */
+.copy {
+  max-width:690px;
+  margin:auto;
 
-.details{
-background:
-linear-gradient(
-180deg,
-#090707,
-#14090b
-);
+  font-size:13px;
+  line-height:2;
+
+  color:#bfb09b;
 }
 
-.cards{
-max-width:1000px;
-margin:50px auto 0;
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
+.paper .copy {
+  color:#654c3b;
 }
+
+/* TICKETS */
+
+.ticket-row {
+  display:grid;
+  grid-template-columns:1fr 1fr;
 
-.card{
-padding:50px 25px;
-border:1px solid rgba(215,181,107,.25);
-background:rgba(0,0,0,.2);
-transition:.4s;
+  gap:30px;
+
+  max-width:1050px;
+
+  margin:auto;
 }
+
+.ticket {
+  background:#f6e7c7;
+
+  color:#24160f;
+
+  padding:38px;
+
+  position:relative;
 
-.card:hover{
-transform:translateY(-8px);
-border-color:var(--gold);
+  border:1px solid #b7955b;
+
+  box-shadow:0 15px 35px rgba(0,0,0,.3);
 }
+
+.ticket:before,
+.ticket:after {
+  content:"";
+
+  position:absolute;
+
+  width:22px;
+  height:22px;
+
+  background:var(--paper);
 
-.icon{
-font-size:28px;
-color:var(--gold);
-margin-bottom:15px;
+  border-radius:50%;
+
+  top:50%;
+
+  transform:translateY(-50%);
 }
 
-.card h3{
-font-family:'Cormorant Garamond';
-font-size:32px;
-font-weight:400;
-margin-bottom:15px;
+.ticket:before {
+  left:-12px;
 }
 
-.card p{
-font-size:11px;
-line-height:2;
-color:var(--muted);
+.ticket:after {
+  right:-12px;
 }
 
-.card b{
-color:var(--cream);
-font-weight:400;
+.ticket h3 {
+  font-family:'Cormorant Garamond';
+  font-size:34px;
+  font-weight:500;
 }
 
-/* ---------- QUOTE ---------- */
+.ticket .route {
+  display:flex;
+  align-items:center;
+  gap:12px;
 
-.quote{
-background:
-linear-gradient(
-135deg,
-#260b10,
-#080606
-);
+  margin:22px 0;
+
+  color:#8a5b35;
 }
+
+.ticket .route:before,
+.ticket .route:after {
+  content:"";
+
+  flex:1;
 
-.quote-text{
-font-family:'Cormorant Garamond';
-font-size:clamp(30px,5vw,58px);
-max-width:850px;
-margin:auto;
-line-height:1.2;
+  border-top:1px dashed #8a5b35;
 }
 
-.quote-author{
-display:block;
-margin-top:25px;
-font-size:9px;
-letter-spacing:3px;
-color:var(--gold);
+.ticket-info {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+
+  gap:18px;
+
+  border-top:1px solid rgba(170,140,95,.4);
+
+  padding-top:20px;
 }
+
+.ticket-info span {
+  display:block;
+
+  font-size:7px;
+  letter-spacing:2px;
+  text-transform:uppercase;
 
-/* ---------- DRESS CODE ---------- */
+  color:#85684c;
+}
 
-.dress{
-background:#090707;
+.ticket-info strong {
+  font-family:'Cormorant Garamond';
+  font-size:21px;
+  font-weight:500;
 }
+
+/* ITINERARY */
 
-.dress-box{
-max-width:700px;
-margin:45px auto 0;
-padding:55px 25px;
-border:1px solid rgba(215,181,107,.25);
+.timeline {
+  max-width:1050px;
+  margin:auto;
+
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+
+  position:relative;
 }
+
+.timeline:before {
+  content:"";
 
-.colors{
-display:flex;
-justify-content:center;
-gap:18px;
-margin-top:30px;
+  position:absolute;
+
+  top:28px;
+  left:7%;
+  right:7%;
+
+  border-top:1px dashed rgba(198,154,75,.6);
 }
 
-.color{
-width:45px;
-height:45px;
-border-radius:50%;
-border:1px solid rgba(255,255,255,.15);
+.stop {
+  text-align:center;
+  position:relative;
 }
+
+.circle {
+  width:55px;
+  height:55px;
+
+  border:1px solid var(--gold);
+
+  border-radius:50%;
 
-.red{background:#701722}
-.black{background:#080808}
-.gold{background:#d1ad60}
+  display:grid;
+  place-items:center;
 
-/* ---------- VENUE ---------- */
+  margin:0 auto 20px;
 
-.venue{
-background:
-linear-gradient(
-rgba(30,8,11,.8),
-rgba(5,5,5,.95)
-);
+  background:#0d0807;
+
+  color:var(--gold-light);
+
+  position:relative;
+  z-index:2;
 }
 
-.venue-name{
-font-family:'Cormorant Garamond';
-font-size:38px;
-margin-top:20px;
+.stop h3 {
+  font-family:'Cormorant Garamond';
+  font-size:28px;
 }
 
-.venue-note{
-margin-top:12px;
-color:var(--muted);
-font-size:12px;
+.stop p {
+  font-size:9px;
+  letter-spacing:2px;
+  color:#b7a994;
+
+  margin-top:7px;
+
+  text-transform:uppercase;
 }
+
+/* TRAVEL */
 
-/* ---------- RSVP ---------- */
+.map-card {
+  max-width:1000px;
 
-.rsvp{
-min-height:550px;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
+  margin:auto;
 
-background:
-radial-gradient(
-circle at center,
-rgba(120,20,30,.3),
-transparent 55%
-);
+  min-height:330px;
+
+  padding:55px;
+
+  border:1px solid rgba(198,154,75,.35);
+
+  background:
+    repeating-linear-gradient(
+      35deg,
+      transparent 0 48px,
+      rgba(198,154,75,.05) 49px 50px
+    ),
+    #100a08;
+
+  position:relative;
+  overflow:hidden;
 }
+
+.route-map {
+  height:130px;
 
-.rsvp-heart{
-font-size:30px;
-color:var(--gold);
-margin-bottom:15px;
+  position:relative;
+
+  margin:25px 0;
+
+  border-top:1px dashed rgba(198,154,75,.4);
+  border-bottom:1px dashed rgba(198,154,75,.4);
 }
+
+.route-line {
+  position:absolute;
 
-footer{
-padding:65px 20px;
-text-align:center;
-border-top:1px solid rgba(215,181,107,.2);
-background:#050505;
+  left:25%;
+  right:20%;
+  top:62px;
+
+  border-top:1px dashed var(--gold);
 }
+
+.route-map:before {
+  content:"✈";
+
+  position:absolute;
 
-footer .logo{
-display:block;
-margin-bottom:15px;
+  left:22%;
+  top:43px;
+
+  color:var(--gold-light);
+
+  font-size:25px;
+
+  transform:rotate(20deg);
 }
+
+.route-map:after {
+  content:"♥";
+
+  position:absolute;
 
-footer p{
-font-size:10px;
-color:var(--muted);
-letter-spacing:1px;
+  right:17%;
+  top:43px;
+
+  color:#a92e3a;
+
+  font-size:25px;
 }
 
-/* ---------- MOBILE ---------- */
+/* COUNTDOWN */
 
-@media(max-width:700px){
+.countdown {
+  display:flex;
+  justify-content:center;
+  gap:55px;
+  margin-top:38px;
+}
 
-nav{
-padding:20px;
+.time {
+  text-align:center;
 }
+
+.time strong {
+  display:block;
+
+  font-family:'Cormorant Garamond';
+  font-size:52px;
+  font-weight:400;
 
-nav a:not(.logo){
-display:none;
+  color:#f1dfbb;
 }
 
-.hero{
-min-height:700px;
+.time span {
+  font-size:8px;
+  letter-spacing:3px;
+
+  color:var(--gold);
 }
+
+/* RSVP */
+
+.rsvp {
+  min-height:600px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
 
-.hero h1{
-font-size:70px;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(100,20,30,.3),
+      transparent 55%
+    ),
+    #090706;
 }
 
-.script{
-font-size:42px;
+.rsvp .passport {
+  transform:rotate(-2deg);
+
+  width:min(500px,90vw);
+
+  height:auto;
+
+  min-height:350px;
 }
+
+/* FOOTER */
+
+.footer {
+  text-align:center;
 
-.timer{
-gap:18px;
+  padding:65px 20px;
+
+  background:#050403;
+
+  border-top:1px solid rgba(198,154,75,.3);
 }
 
-.timer-item strong{
-font-size:38px;
+.footer .logo {
+  font-size:38px;
 }
 
-.cards{
-grid-template-columns:1fr;
-max-width:400px;
+.footer p {
+  font-size:9px;
+  letter-spacing:2px;
+  color:#8f8374;
+
+  margin-top:12px;
 }
+
+/* MOBILE */
+
+@media(max-width:900px) {
+
+  .hero-grid {
+    grid-template-columns:1fr;
+    max-width:520px;
+    margin:auto;
+  }
+
+  .passport,
+  .boarding {
+    display:none;
+  }
+
+  .hero-inner {
+    padding-top:110px;
+  }
+
+  .ticket-row {
+    grid-template-columns:1fr;
+  }
+
+  .timeline {
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+  }
 
-section{
-padding:85px 25px;
+  .timeline:before {
+    display:none;
+  }
+
 }
+
+@media(max-width:600px) {
+
+  nav .links {
+    display:none;
+  }
+
+  .menu {
+    display:block;
+  }
+
+  .section {
+    padding:80px 20px;
+  }
+
+  .hero h1 {
+    font-size:70px;
+  }
+
+  .hero-script {
+    font-size:39px;
+  }
+
+  .countdown {
+    gap:17px;
+  }
+
+  .time strong {
+    font-size:36px;
+  }
+
+  .ticket {
+    padding:28px 22px;
+  }
+
+  .map-card {
+    padding:35px 20px;
+  }
 
 }
 
 </style>
 </head>
-
-<body>
-
-<!-- NAVIGATION -->
-
-<nav>
-
-<a href="#" class="logo">A & M</a>
-
-<div>
-<a href="#story">Our Story</a>
-<a href="#details">Details</a>
-<a href="#rsvp">RSVP</a>
-</div>
-
-</nav>
-
-
-<!-- FIREFLIES -->
-
-<div class="firefly f1"></div>
-<div class="firefly f2"></div>
-<div class="firefly f3"></div>
-<div class="firefly f4"></div>
-<div class="firefly f5"></div>
-<div class="firefly f6"></div>
-<div class="firefly f7"></div>
-<div class="firefly f8"></div>
-
-
-<!-- HERO -->
-
-<header class="hero">
-
-<div class="hero-content">
-
-<div class="eyebrow">
-A FOREST DREAM • MAY 20, 2027
-</div>
-
-<h1>
-Aireen
-<span>&</span>
-Matej
-</h1>
-
-<div class="script">
-are getting married
-</div>
-
-<p class="subtitle">
-Two hearts. Two worlds. One beautiful forever.
-</p>
-
-<a href="#story" class="gold-button">
-Enter Our Story
-</a>
-
-</div>
-
-</header>
-
-
-<!-- COUNTDOWN -->
-
-<section class="countdown">
-
-<div class="section-label">
-COUNTING DOWN TO FOREVER
-</div>
-
-<h2>Until We Say “I Do”</h2>
-
-<div class="timer">
-
-<div class="timer-item">
-<strong id="days">0</strong>
-<span>DAYS</span>
-</div>
-
-<div class="timer-item">
-<strong id="hours">0</strong>
-<span>HOURS</span>
-</div>
-
-<div class="timer-item">
-<strong id="minutes">0</strong>
-<span>MINUTES</span>
-</div>
-
-<div class="timer-item">
-<strong id="seconds">0</strong>
-<span>SECONDS</span>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- OUR STORY -->
-
-<section class="story" id="story">
-
-<div class="section-label">
-OUR STORY
-</div>
-
-<h2>
-Two worlds. One love.
-</h2>
-
-<p class="description">
-
-Somewhere between two countries, countless conversations,
-beautiful memories and the little moments that became
-our favorite memories, we found something worth choosing
-every single day.
-
-<br><br>
-
-Now, we are beginning a new chapter —
-one filled with love, laughter, adventure and forever.
-
-</p>
-
-<div class="signature">
-Aireen & Matej
-</div>
-
-</section>
-
-
-<!-- DETAILS -->
-
-<section class="details" id="details">
-
-<div class="section-label">
-THE WEDDING DAY
-</div>
-
-<h2>
-Our Beginning
-</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<div class="icon">✦</div>
-
-<h3>When</h3>
-
-<p>
-Thursday<br><br>
-<b>May 20, 2027</b>
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">❧</div>
-
-<h3>Where</h3>
-
-<p>
-Philippines<br><br>
-<b>Venue details coming soon</b>
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="icon">♡</div>
-
-<h3>Celebration</h3>
-
-<p>
-A day filled with<br>
-love, laughter & memories<br><br>
-<b>50 special guests</b>
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- QUOTE -->
-
-<section class="quote">
-
-<div class="section-label">
-FOREVER
-</div>
-
-<p class="quote-text">
-
-“Whatever our souls are made of,
-his and mine are the same.”
-
-</p>
-
-<span class="quote-author">
-— EMILY BRONTË
-</span>
-
-</section>
-
-
-<!-- DRESS CODE -->
-
-<section class="dress">
-
-<div class="section-label">
-DRESS CODE
-</div>
-
-<h2>
-Elegant & Romantic
-</h2>
-
-<p class="description">
-
-Our celebration will embrace an elegant,
-romantic atmosphere inspired by the forest at night.
-
-<br><br>
-
-Think timeless, sophisticated and magical.
-
-</p>
-
-<div class="dress-box">
-
-<div class="section-label">
-OUR COLORS
-</div>
-
-<div class="colors">
-
-<div class="color red"></div>
-<div class="color black"></div>
-<div class="color gold"></div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- VENUE -->
-
-<section class="venue">
-
-<div class="section-label">
-OUR WEDDING VENUE
-</div>
-
-<h2>
-Where Our Forever Begins
-</h2>
-
-<div class="venue-name">
-Venue To Be Announced
-</div>
-
-<p class="venue-note">
-
-Full venue details, directions and accommodation
-information will be shared with our formal invitation.
-
-</p>
-
-</section>
-
-
-<!-- RSVP -->
-
-<section class="rsvp" id="rsvp">
-
-<div class="rsvp-heart">
-♡
-</div>
-
-<div class="section-label">
-KINDLY RESPOND
-</div>
-
-<h2>
-Will you celebrate with us?
-</h2>
-
-<p class="description">
-
-Your presence would mean the world to us.
-
-<br><br>
-
-Formal invitation and RSVP details
-will be shared soon.
-
-</p>
-
-<a
-href="mailto:YOUR-EMAIL@example.com"
-class="gold-button"
->
-RSVP WITH LOVE
-</a>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-<div class="logo">
-Aireen & Matej
-</div>
-
-<p>
-With love, always.
-</p>
-
-<br>
-
-<p>
-© 2027 • Our forever begins here.
-</p>
-
-</footer>
-
-
-<script>
-
-/* COUNTDOWN */
-
-const weddingDate =
-new Date("2027-05-20T15:00:00+02:00").getTime();
-
-function updateCountdown(){
-
-const now =
-new Date().getTime();
-
-const distance =
-weddingDate - now;
-
-if(distance <= 0){
-return;
-}
-
-document.getElementById("days").innerText =
-Math.floor(
-distance /
-(1000 * 60 * 60 * 24)
-);
-
-document.getElementById("hours").innerText =
-Math.floor(
-distance /
-(1000 * 60 * 60)
-) % 24;
-
-document.getElementById("minutes").innerText =
-Math.floor(
-distance /
-(1000 * 60)
-) % 60;
-
-document.getElementById("seconds").innerText =
-Math.floor(
-distance / 1000
-) % 60;
-
-}
-
-updateCountdown();
-
-setInterval(
-updateCountdown,
-1000
-);
-
-</script>
-
-</body>
-</html>
